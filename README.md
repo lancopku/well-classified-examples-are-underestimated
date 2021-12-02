@@ -8,9 +8,9 @@ import torch
 import torch.nn as nn
 from torch.nn import functional as F
 
-class EncourageLoss(nn.Module):
+class EncouragingLoss(nn.Module):
     def __init__(self, log_end=0.75, reduction='mean'):
-        super(EncourageLoss, self).__init__()
+        super(EncouragingLoss, self).__init__()
         self.log_end = log_end  # 1 refers to the normal bonus, but 0.75 can easily work in existing optimization systems
         self.reduction = reduction
 
