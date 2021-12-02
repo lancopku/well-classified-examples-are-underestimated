@@ -3,9 +3,9 @@ import torch
 import torch.nn as nn
 from torch.nn import functional as F
 
-class EncourageLoss(nn.Module):
-    def __init__(self, log_end=1.0, reduction='mean'):
-        super(EncourageLoss, self).__init__()
+class EncouragingLoss(nn.Module):
+    def __init__(self, log_end=0.75, reduction='mean'):
+        super(EncouragingLoss, self).__init__()
         self.log_end = log_end
         self.reduction = reduction
 
