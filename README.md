@@ -2,7 +2,7 @@
 
 In this paper, we find that the cross-entropy loss hinders representation learning, energy optimization, and margin growth. We support this finding by both theoretical analysis and empirical results.
 
-You can find implementation and scripts in the corresponding directory for each task.
+You can find implementation and scripts (readme.sh) in the corresponding directory for each task.
 
 Our modification is mainly around the el.py in each task.
 
