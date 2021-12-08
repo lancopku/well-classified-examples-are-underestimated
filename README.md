@@ -7,7 +7,7 @@ You can find implementation and scripts (readme.sh) in the corresponding directo
 Our modification is mainly around the el.py in each task.
 
 
-We give the code for our conterexample below.
+We give the code for the conterexample (encouraging loss) below.
 
 ### Example implementation
 ```python
