@@ -1,10 +1,13 @@
 ### This is a repository for the paper of "Well-classified Examples are Underestimated in Classification with Deep Neural Networks"
 
-In this paper, we find that the cross-entropy loss hinders representation learning, energy optimization, and margin growth. We support this finding by both theoretical analysis and empirical results.
+In this paper, we find that the cross-entropy loss hinders representation learning, energy optimization, and margin growth, and well-classified examples play a vital role to dealing with these issues. We support this finding by both theoretical analysis and empirical results. 
 
 You can find implementation and scripts (readme.sh) in the corresponding directory for each task.
 
 Our modification is mainly around the el.py in each task.
+
+
+We give the code for our conterexample below.
 
 ### Example implementation
 ```python
