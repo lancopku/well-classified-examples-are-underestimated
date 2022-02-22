@@ -34,3 +34,4 @@ class EncouragingLoss(nn.Module):
         return loss
 
 ```
+For the label smoothed version, you can refer to label_smoothed_encouraging_loss_fairseq.py
