@@ -74,7 +74,7 @@ class LabelSmoothedEncourageLossFairseq(FairseqCriterion):
         parser.add_argument('--ignore-prefix-size', default=0, type=int,
                             help='Ignore first N tokens')
         # add for encouraging loss
-        parser.add_argument('--log_end', type=float, default=1.0)
+        parser.add_argument('--log_end', type=float, default=0.5)
 
         # fmt: on
 
