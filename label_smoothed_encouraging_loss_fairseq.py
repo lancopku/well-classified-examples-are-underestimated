@@ -41,7 +41,7 @@ def label_smoothed_nll_loss(lprobs, target, epsilon, ignore_index=None, reduce=T
     loss = (1.0 - epsilon) * nll_loss + eps_i * smooth_loss
     return loss, nll_loss
 
-# 施工完成才能叫 encouraging loss
+
 @register_criterion("label_smoothed_encourage_loss_fairseq")
 class LabelSmoothedEncourageLossFairseq(FairseqCriterion):
     def __init__(
