@@ -106,7 +106,7 @@ done
 python3 main.py --cfg ./config/iNaturalist18/cls_crt.yaml --model_dir './logs/iNaturalist18/models/iNaturalist18_CE' \
 --log_dir ./logs/iNaturalist18/clslearn/crt_CE
 ```
-2. on our method, which learns representations in the first stage
+2. on our method, which learns representations with EL in the first stage
 ```
 #iNaturalist18_CE is the directory to the trained model with the EL loss
 python3 main.py --cfg ./config/iNaturalist18/cls_crt.yaml --model_dir './logs/iNaturalist18/models/iNaturalist18_EL' \
