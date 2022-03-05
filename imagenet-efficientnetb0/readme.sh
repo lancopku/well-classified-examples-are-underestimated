@@ -4,7 +4,7 @@ clone the code from pytorch-image-models, install required packages, and overwri
 # Experiments
 1. baseline
 export CUDA_VISIBLE_DEVICES=0,1
-bonus_gamma=0
+bonus_gamma=0 # bonus_gamma=0 means that we do not use EL
 log_end=1
 bonus_rho=1
 save_dir=eb0_bg${bonus_gamma}_le${log_end}_br${bonus_rho}
