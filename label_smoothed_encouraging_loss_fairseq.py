@@ -74,7 +74,7 @@ class LabelSmoothedEncourageLossFairseq(FairseqCriterion):
         parser.add_argument('--ignore-prefix-size', default=0, type=int,
                             help='Ignore first N tokens')
         # add for encouraging loss
-        parser.add_argument('--log_end', type=float, default=0.5)
+        parser.add_argument('--log_end', type=float, default=0.5,help=' # 1 refers to the normal bonus, but 0.75 can easily work in existing optimization systems, 0.5 work for all settings we tested, recommend LE=0.75 for high accuracy scenarios and low LE for low accuracy scenarios.')
 
         # fmt: on
 
