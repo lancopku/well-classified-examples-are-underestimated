@@ -7,7 +7,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 class LabelSmoothingEncouragingLoss(nn.Module):
     """
-    NLL loss with label smoothing.
+    Encouraging Loss with label smoothing.
     """
     def __init__(self, smoothing=0.1, log_end=0.75):
         """
@@ -29,10 +29,6 @@ class LabelSmoothingEncouragingLoss(nn.Module):
             y_log_end = torch.log(torch.ones_like(probs) - log_end)
             bonus_after_log_end = 1/(log_end - torch.ones_like(probs)) * (probs-log_end) + y_log_end
             bonus = torch.where(probs > log_end, bonus_after_log_end, bonus)
-        # nll_loss = -logprobs.gather(dim=-1, index=target.unsqueeze(1))
-        # nll_loss = nll_loss.squeeze(1)
-        # smooth_loss = -logprobs.mean(dim=-1)
-        # loss = self.confidence * nll_loss + self.smoothing * smooth_loss
         el_loss =(bonus-logprobs).gather(dim=-1, index=target.unsqueeze(1))
         el_loss = el_loss.squeeze(1)
         smooth_loss = (bonus-logprobs).mean(dim=-1)
